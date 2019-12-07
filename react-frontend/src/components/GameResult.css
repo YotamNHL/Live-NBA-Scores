@@ -1,5 +1,7 @@
  
   .scoreboard {
+    border-radius: 12px;
+    margin-top: 4%;
     border: 1px solid #cbccce;
     background: #fff;
     display: grid;
@@ -157,6 +159,7 @@
     font-weight: 900;
     color: #9a9faa;
   }
+  
   .scoreboard .note {
     grid-column: 1 / span 2;
     display: flex;

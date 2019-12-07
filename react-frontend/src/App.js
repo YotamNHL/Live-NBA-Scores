@@ -13,7 +13,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Live Scores</h1>
         </header>
+        <div className="games-list">
           <GamesList />
+        </div>
       </div>
     );
   }

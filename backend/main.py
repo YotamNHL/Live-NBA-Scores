@@ -21,6 +21,7 @@ try:
     cluster = MongoClient("mongodb+srv://TalJG:SteveNash13@cluster0-zmj3y.mongodb.net/test?retryWrites=true&w=majority")
     db = cluster["NBA_games_results"]
     collection = db["games_sessions"]
+    logos_collection = db["Teams_Logos"]
 except Exception as e:
     print("main.py -" + e)
 
@@ -44,29 +45,39 @@ def index():
 @app.route('/games', methods=['GET'])
 def games():
     latest_games = get_games_from_db()
-    print(latest_games)
     output = []
     for game in latest_games:
-        output.append({'home': game['home'],
+        print("home team name from data is: " + game['home'])
+        print("away team name from data is: " + game['away'])
+        home = game['home']
+        away = game['away']
+        homeImg = logos_collection.find_one({'name': home})['url']
+        print("home image: " + homeImg)
+        awayImg = logos_collection.find_one({'name': away})['url']
+        print("away image: " + awayImg)
+        output.append({'id': game['_id'],
+                      'home': game['home'],
                       'away': game['away'],
                       'home_score': game['home_score'],
-                      'away_score': game['away_score']
+                      'away_score': game['away_score'],
+                     'homeImg': homeImg,
+                     'awayImg': awayImg
                       })
     return jsonify(output)
 
 
-@app.route('/updated', methods=['POST'])
-def reload_page():
-    has_been_updated = request.json['has_been_updated']
-    if has_been_updated:
-        latest_games = collection.find({
-            "game_time": {'$gte': datetime.timestamp(datetime.now()) - 86400},
-            # "away_score": {'$ne': "No score yet"}
-        })
-        output = []
-        for game in latest_games:
-            output.append(game)
-        return flask.render_template("index.html", token=output)
+# @app.route('/updated', methods=['POST'])
+# def reload_page():
+#     has_been_updated = request.json['has_been_updated']
+#     if has_been_updated:
+#         latest_games = collection.find({
+#             "game_time": {'$gte': datetime.timestamp(datetime.now()) - 86400},
+#             # "away_score": {'$ne': "No score yet"}
+#         })
+#         output = []
+#         for game in latest_games:
+#             output.append(game)
+#         return flask.render_template("index.html", token=output)
 
 
-app.run(debug=True)
+# app.run(debug=True)

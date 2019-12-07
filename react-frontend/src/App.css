@@ -27,4 +27,7 @@
   to { transform: rotate(360deg); }
 }
 
-
+.games-list {
+  width: 40%;
+  margin-left: 29%;
+}

@@ -13,20 +13,21 @@ class GamesList extends Component {
 
     componentDidMount() {
         this.updateGames();
-        setInterval(this.updateGames, 1000 * 20);
+        setInterval(this.updateGames, 1000 * 90);
     }
 
     updateGames = () => {
         backend.getLatestGames()
-        .then(gamesResult => this.setState({ games: gamesResult }))
+        .then(gamesResult => this.setState({ games: gamesResult }));
     }
 
     getGamesElements = (games) => {
         
         // Get all the games results as GameResult elements 
         const gamesToShow = games.map(game => {
-            return <GameResult home={game.home} away={game.away} 
-                               homeScore={game.home_score} awayScore={game.away_score}/>;
+            return <GameResult key={game.id} home={game.home} away={game.away} 
+                               homeScore={game.home_score} awayScore={game.away_score}
+                               homeImg={game.homeImg} awayImg={game.awayImg}/>;
         });
         
         return (
