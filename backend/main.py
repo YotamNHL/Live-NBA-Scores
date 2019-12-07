@@ -19,10 +19,12 @@ collection = db["games_sessions"]
 
 @app.route('/', methods=['GET'])
 def get_all_latest_games():
+    print("before getting the collection")
     latest_games = collection.find({
         "game_time": {'$gte': datetime.timestamp(datetime.now()) - 86400},
         # "away_score": {'$ne': "No score yet"}
     })
+    print("after getting the collection")
     output = []
     for game in latest_games:
         output.append(game)
