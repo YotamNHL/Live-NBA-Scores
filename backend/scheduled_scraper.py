@@ -1,7 +1,6 @@
 from datetime import datetime, timedelta
 from time import sleep
 import schedule
-
 from backend.scraper import scrape_and_load
 
 
