@@ -3,11 +3,12 @@
     border-radius: 12px;
     margin-top: 4%;
     border: 1px solid #cbccce;
-    background: #fff;
+    background: #ffffff;
     display: grid;
-    grid-template-rows: 2rem minmax(3rem, 1fr) minmax(3rem, 1fr) 2rem;
+    /* grid-template-rows: 2rem minmax(3rem, 1fr) minmax(3rem, 1fr) 2rem; */
     grid-template-columns: minmax(8rem, 1fr) 6rem;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   @media only screen and (min-width: 500px) {
     .scoreboard {

@@ -12,6 +12,9 @@ class GameResult extends Component {
 					Teams
 				</div>
 
+                <div class="quaters">
+	            </div>
+
 				<div className="total">
 					Score
 				</div>
