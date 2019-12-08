@@ -2,6 +2,7 @@
   .scoreboard {
     border-radius: 12px;
     margin-top: 4%;
+    margin-bottom: 4%;
     border: 1px solid #cbccce;
     background: #ffffff;
     display: grid;
@@ -31,11 +32,11 @@
       grid-column: 0 / span 2;
     }
   }
-  .scoreboard .quaters {
+  .scoreboard .spacer {
     display: none;
   }
   @media only screen and (min-width: 500px) {
-    .scoreboard .quaters {
+    .scoreboard .spacer {
       display: block;
       grid-column: 2 / span 4;
       grid-row: 1 / span 1;
@@ -43,7 +44,7 @@
       flex-direction: row;
       border-bottom: 1px solid #cbccce;
     }
-    .scoreboard .quaters span {
+    .scoreboard .spacer span {
       flex: 1;
       display: flex;
       justify-content: center;

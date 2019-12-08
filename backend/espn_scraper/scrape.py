@@ -14,9 +14,9 @@ def nba_scores_scraper(given_date):
     r = session.get(url)
 
     # Repeats initial rendering until it succeeds.
-    # I preferred it looping and trying to render again instead of just putting a higher timeout value.
-    # The reason is that in most cases that it fails to load, the quickest solution is simply to stop and retry,
-    # instead of wait longer for it to render.
+    # I preferred it skipping and trying to render again on the next call instead of just putting
+    # a higher timeout value. The reason is that after testing it, it seems like in most cases that it fails to load,
+    # the quickest solution is simply to stop and retry - instead of wait longer for it to render.
     try:
         r.html.render(timeout=20)
     except Exception:

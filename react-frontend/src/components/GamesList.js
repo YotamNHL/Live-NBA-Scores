@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import GameResult from './GameResult';
 import backend from '../services/backend';
 
+/* The Game list component. A simple list rerendering of all the game 'GameResult' component (the scoreboard). */
 class GamesList extends Component {
     
     constructor(props) {
@@ -11,6 +12,8 @@ class GamesList extends Component {
         };
     }
 
+    /* An interval to update the game list every 90 seconds (the data base itself is
+    being updated at a rate of every 30 seconds) */
     componentDidMount() {
         this.updateGames();
         setInterval(this.updateGames, 1000 * 90);
@@ -41,7 +44,7 @@ class GamesList extends Component {
         const { games } = this.state;
         const gamesLoaded = games.length > 0;
         
-        // check if there are games to show
+        // Checks if there are games to show, with a "Loading..." placeholder if not.
         return gamesLoaded ? this.getGamesElements(games) : <div>Loading...</div>
     }
 }
