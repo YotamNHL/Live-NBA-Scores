@@ -1,5 +1,9 @@
 from pymongo import MongoClient
 import csv
+import logging
+
+logging.basicConfig(filename='log_file.log', level=logging.WARNING,
+                    format='%(asctime)s: %(levelname)s: %(processName)s :%(message)s:')
 
 # Opens the csv sheet that contains the client key.
 with open('credentials.csv', 'r') as input:
@@ -9,13 +13,12 @@ with open('credentials.csv', 'r') as input:
         mongoClientKey = line[0]
 
 
-# Connects the MongoDB.
+# Connects to the MongoDB.
 def connect_db():
     try:
-        print('Connecting to database')
         cluster = MongoClient(mongoClientKey)
         db = cluster["NBA_games_results"]
-        print("Connected successfully.")
+        logging.debug('Connected to the data base successfully.')
         return db
     except Exception as e:
         print("main.py -" + e)

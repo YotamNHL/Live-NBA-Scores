@@ -1,4 +1,7 @@
- 
+ *{
+   text-decoration: none;
+ }
+
   .scoreboard {
     border-radius: 12px;
     margin-top: 4%;
@@ -11,11 +14,17 @@
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+
+  .scoreboard a:hover{
+    transition: scale(1.1);
+  }
+
   @media only screen and (min-width: 500px) {
     .scoreboard {
       grid-template-columns: minmax(8rem, 1fr) repeat(4, 2rem) 6rem;
     }
   }
+
   .scoreboard .title {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;

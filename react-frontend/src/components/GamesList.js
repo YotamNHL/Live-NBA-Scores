@@ -12,8 +12,8 @@ class GamesList extends Component {
         };
     }
 
-    /* An interval to update the game list every 90 seconds (the data base itself is
-    being updated at a rate of every 30 seconds) */
+    // An interval to update the game list every 90 seconds (the data base itself is
+    // being updated at a rate of every 30 seconds).
     componentDidMount() {
         this.updateGames();
         setInterval(this.updateGames, 1000 * 90);
@@ -28,7 +28,7 @@ class GamesList extends Component {
         
         // Get all the games results as GameResult elements 
         const gamesToShow = games.map(game => {
-            return <GameResult key={game.id} home={game.home} away={game.away} 
+            return <GameResult key={game.id} gameId={game.id} home={game.home} away={game.away} 
                                homeScore={game.home_score} awayScore={game.away_score}
                                homeImg={game.homeImg} awayImg={game.awayImg}/>;
         });
