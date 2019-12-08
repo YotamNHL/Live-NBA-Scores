@@ -42,13 +42,13 @@ def nba_scores_scraper(given_date):
             games_ids.append([val[17::]])
 
     # iterate through the total_times element to append all game times into one list.
-    # if (for any reason) we will scrape an older date, the game's date and time data
-    # won't be reachable via the espn dashboard, hence I've added this workaround in that case.
     for time in total_times:
         try:
             games_times.append(datetime.timestamp(datetime.strptime(
                 (time.attrs['data-date'].replace('T', ' ').replace('Z', 'am')),
                 '%Y-%m-%d %H:%M%p')))
+        # if (for any reason) we will scrape an older date, the game's date and time data
+        # won't be reachable via the espn dashboard, hence I've added this workaround in that case.
         except Exception:
             games_times.append(datetime.timestamp(datetime.strptime(
                 (given_date_str[0:4] + "-" + given_date_str[4:6] + "-" + given_date_str[6:8] + " 00:00am"),

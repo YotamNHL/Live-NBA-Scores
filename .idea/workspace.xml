@@ -5,20 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88c8fc42-e823-4712-8b4b-7f24c387b17a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/NBA_Intell-Acts_Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NBA_Intell-Acts_Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/scraper/connect_to_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/scraper/pull_from_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/scheduled_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/scheduled_scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/scraper/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/scraper/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/scraper/credentials.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/scraper/scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/scraper/scrape.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/scraper/update_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/scraper/update_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/GameResult.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/components/GameResult.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/GameResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/components/GameResult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Team.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/components/Team.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/dbService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/test.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
