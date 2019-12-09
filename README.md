@@ -1,11 +1,17 @@
 # Live-NBA-Scores
 ## Intro
+<kbd>
+<img src="https://i.ibb.co/KwWBgLL/site.png"></img>
+</kbd>
+
 A single web application that presents NBA game scores from the last 24 hours and being updated live.
 The app consists:
 * REACT frontend to present the different matches.
 * Flask REST api, that serves the frontend --> it pulls data from the DB send the updated game information to the UI.
 * Scheduled scraper, that scrapes data from ESPN.com every 30 seconds and updates the DB accordingly.
 * MongoDB that stores all the matches information and the teams logos (for the UI).
+
+
 
 ## Usage
 Notice: Python 3.7+ is required!
@@ -44,6 +50,9 @@ cd backend
 python main.py
 python scheduled_scraper.py
 ```
+<kbd>
+<img src="https://i.imgur.com/sxxEgTP.png"></img>
+</kbd>
 
 Now we can enter localhost:5000 in our browser and enjoy.
 Notice that running scheduled_scraper for the first time will install chromium on you machine (will take a minute or 2).
