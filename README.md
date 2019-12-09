@@ -1,7 +1,7 @@
 # Live-NBA-Scores
 ## Intro
 <kbd>
-<img src="https://i.ibb.co/KwWBgLL/site.png"></img>
+<img src="https://i.imgur.com/0OALjxe.png"></img>
 </kbd>
 
 A single web application that presents NBA game scores from the last 24 hours and being updated live.
