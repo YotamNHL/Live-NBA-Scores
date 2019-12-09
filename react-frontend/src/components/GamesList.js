@@ -16,7 +16,7 @@ class GamesList extends Component {
     // being updated at a rate of every 30 seconds).
     componentDidMount() {
         this.updateGames();
-        setInterval(this.updateGames, 1000 * 90);
+        setInterval(this.updateGames, 1000 * 30);
     }
 
     updateGames = () => {
