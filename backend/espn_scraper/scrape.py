@@ -60,7 +60,7 @@ def nba_scores_scraper(given_date):
         # if (for any reason) we will scrape an older date, the game's date and time data
         # won't be reachable via the espn dashboard, hence I've added this workaround in that case.
         except Exception as e:
-            logging.warning('The game has no game_time value at ESPN, probably since the match already ended.'
+            logging.debug('The game has no game_time value at ESPN, probably since the match already ended.'
                             'error: {} . Instead a full game time data, we will try to scrape the date only just in'
                             'case. It is likely that we already got the time of the game when at the first'
                             'time we scraped it, and in that case there is no issue.'.format(str(e)))
@@ -80,7 +80,7 @@ def nba_scores_scraper(given_date):
     # it's a workaround to avoid having miss-matched data later on, and also to have a placeholder for a game
     # that has yet to begin.
     if len(teams) != len(scores):
-        logging.warning('Some of the games has not started yet. We will append "no score yet" in the teams score value')
+        logging.debug('Some of the games has not started yet. We will append "no score yet" in the teams score value')
         for i in range(len(scores), len(teams)):
             scores.append('No score yet')
 

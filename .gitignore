@@ -1,8 +1,8 @@
-/ev
-/.idea
-/.vscode
-/backend/.idea
-/backend/__pycache__
-/backend/espn_scraper/__pycache__
-/backend/log_file.log
-/backend/credentials.csv
+/ev/
+/.idea/
+/.vscode/
+/backend/.idea/
+/backend/__pycache/__
+/backend/espn_scraper/__pycache__/
+/backend/log_file.log/
+/backend/credentials.csv/
