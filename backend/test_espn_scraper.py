@@ -1,8 +1,11 @@
 import unittest
 import espn_scraper
+import warnings
 
 
 class TestScrape(unittest.TestCase):
+    def setUp(self):
+        warnings.simplefilter("ignore", category=DeprecationWarning)
 
     # Test Purpose: to see that the scraping process itself pulls the exact right data in the right order without
     # any miss-matches.
@@ -30,7 +33,7 @@ class TestScrape(unittest.TestCase):
     # Test Purpose: to see verify that we're able to pull the right logo image from our database.
     def test_logo_pulling(self):
         test_result = espn_scraper.pull_from_db.get_team_logo("Mavericks")
-        true_result = "http://content.sportslogos.net/logos/6/228/thumbs/22834632018.gif"
+        true_result = "https://cdn.iconscout.com/icon/free/png-128/dallas-mavericks-1880117-1593225.png"
         self.assertEqual(test_result, true_result)
 
     # Test Purpose: to assert that if we request a logo for a team that's not in our data base for some reason,

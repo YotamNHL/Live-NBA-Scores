@@ -27,7 +27,7 @@ def nba_scores_scraper(given_date):
     # a higher timeout value. The reason is that after testing it, it seems like in most cases that it fails to load,
     # the quickest solution is simply to stop and retry - instead of wait longer for it to render.
     try:
-        r.html.render(timeout=20)
+        r.html.render(timeout=25)
         logging.info('The page has been rendered. Ready to scrape.')
     except Exception as e:
         logging.error('Did not scrape. Error in render process: {}'.format(str(e)))
