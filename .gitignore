@@ -5,3 +5,4 @@
 /backend/__pycache__
 /backend/espn_scraper/__pycache__
 /backend/log_file.log
+/backend/credentials.csv

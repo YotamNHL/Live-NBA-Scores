@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.team_name{
+  margin-top: 30%;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 1.3s linear;
   height: 55px;
@@ -11,6 +15,7 @@
 .App-logo img:hover {
   transition: scale(1.5);
 }
+
 
 .App-header {
   background-color: #b5c1c7;

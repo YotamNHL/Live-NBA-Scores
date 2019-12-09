@@ -8,10 +8,18 @@ logos_collection = db['Teams_logos']
 
 # a method for querying the games that are from the last 24 hours timeframe AND has already started.
 def get_games_from_db():
-    print('Get last games')
     latest_games = db.games_sessions.find({
         "game_time": {'$gte': datetime.timestamp(datetime.now()) - 86400},
         "away_score": {'$ne': "No score yet"}
+    })
+    return latest_games
+
+# # a method for querying the games that are from the last 24 hours timeframe AND has already started of a specific team.
+def get_games_from_db_of_team(team):
+    latest_games = db.games_sessions.find({
+        "game_time": {'$gte': datetime.timestamp(datetime.now()) - 86400},
+        "away_score": {'$ne': "No score yet"},
+        '$or': [{'home': team}, {'away': team}]
     })
     return latest_games
 
