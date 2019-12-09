@@ -5,6 +5,9 @@
 </kbd>
 
 A single web application that presents NBA game scores from the last 24 hours and being updated live.
+
+You can filter the results by a team's name, and press the scoreboards to open up the game's ESPN dashboard.
+
 The app consists:
 * REACT frontend to present the different matches.
 * Flask REST api, that serves the frontend --> it pulls data from the DB send the updated game information to the UI.
