@@ -63,7 +63,7 @@ There's a simple testing file you can run to see everything checks out.
 Simply enter the backend folder, and run the test_espn_scraper.py file:
 ```
 cd backend
-run test_espn_scraper.py
+python test_espn_scraper.py
 ```
 <kbd>
 <img src="https://i.ibb.co/djKB6hY/test-example.png"></img>
