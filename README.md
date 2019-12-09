@@ -15,6 +15,7 @@ The app consists:
 
 ## Usage
 Notice: Python 3.7+ is required!
+
 Steps:
 1. In the folder in which you want to deploy the service, open CMD or Terminal and enter:
 ```
